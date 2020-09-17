@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+}
+
+.square {
+    width: 30%;
+    background-color: blueviolet;
+    padding-top: 30%;
+    float: left;
+    margin: 1.66%;
+    border-radius: 4%;
+}
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: white;
+}
+
+.header {
+    margin: 0 auto;
+    background-color: blueviolet;
+    text-align: center;
+    height: 100px;
+}
+
