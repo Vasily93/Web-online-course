@@ -23,9 +23,7 @@ app.get('/vasya/:whatever', (req, res) => {
 
 app.get('/repeat/:word/:count', (req, res) => {
     const count = req.params.count;
-    console.log(count);
     const word = req.params.word;
-    console.log(word)
     let i = 0;
     let response = '';
     while(i<count) {
