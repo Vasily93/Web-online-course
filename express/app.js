@@ -21,6 +21,20 @@ app.get('/vasya/:whatever', (req, res) => {
     res.send(`Welcome to ${params} dude`) // collon means any pattern after parent slash
 });
 
+app.get('/repeat/:word/:count', (req, res) => {
+    const count = req.params.count;
+    console.log(count);
+    const word = req.params.word;
+    console.log(word)
+    let i = 0;
+    let response = '';
+    while(i<count) {
+        response += word + ' ';
+        i++
+    }
+    res.send(response);
+});
+
 app.get('*',(req, res) => {
     res.send('you are a star!') //works for all undeclared routes
 });
