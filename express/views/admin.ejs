@@ -1,2 +1,8 @@
-<h1>Admin Password: <%= nameVar.toUpperCase() %></h1>
+<%- include('partials/header.ejs')%>
 
+<h1>Admin Password: <%= nameVar.toUpperCase() %></h1>
+<% if(nameVar.toLowerCase() === 'vasya') { %>
+    <p>V pope kakasya</p>
+<% } %>
+
+<%- include('partials/footer.ejs')%>

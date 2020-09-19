@@ -1,0 +1,18 @@
+<%- include('partials/header.ejs')%>
+
+<h2>Here are all the posts:</h2>
+
+<% for(let i=0; i<postsArray.length; i++) { %>
+    <h3><%= postsArray[i].author %>:</h3>
+    <p><%= postsArray[i].title %></p>
+<% } %> 
+
+<h2>With forEach loop</h2>
+
+<% postsArray.forEach(post => { %>
+    <p>
+        <%= post.author %>: <%= post.title %>
+    </p>
+ <% }); %>
+
+ <%- include('partials/footer.ejs')%>
