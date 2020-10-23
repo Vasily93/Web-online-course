@@ -1,21 +1,25 @@
 let max = parseInt(prompt(`Max number`));
 let secretNumber = Math.floor(Math.random() * max);
-let text = 'Take a guess';
 let count = 1;
 
-let num = parseInt(prompt(`${text}`));
+let text = 'Take a guess';
+let num = prompt(`${text}`);
 
-while(num !== secretNumber) {
+while(parseInt(num) !== secretNumber) {
     count++
+    if(num == 'q') {
+        console.log(`you gave up. it was ${secretNumber}`)
+        break;
+    }    
     if(num < secretNumber) {
         text = 'too low'
     } else {
         text = 'too high'
     }
-    num = parseInt(prompt(`${text}`))
+    num = prompt(`${text}`)
 }
 
-console.log('yesss!', `count: ${count}`)
+console.log( `count: ${count}`)
 
 
 
