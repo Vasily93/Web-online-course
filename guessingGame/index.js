@@ -1,7 +1,9 @@
-let secretNumber = 56;
-let text = 'Guess a number'
-let num = parseInt(prompt(`${text}`));
+let max = parseInt(prompt(`Max number`));
+let secretNumber = Math.floor(Math.random() * max);
+let text = 'Take a guess';
 let count = 1;
+
+let num = parseInt(prompt(`${text}`));
 
 while(num !== secretNumber) {
     count++
