@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update form</title>
+</head>
+<body style="text-align: center;" >
+    <h2>Update the comment:</h2>
+    <form method="POST" action="/comments/<%= comment.id%>?_method=PATCH">
+        <textarea cols="60" rows="3" name="comment">
+            <%= comment.comment%>
+        </textarea>
+        <br>
+        <button>Update</button>
+    </form>
+</body>
+</html>

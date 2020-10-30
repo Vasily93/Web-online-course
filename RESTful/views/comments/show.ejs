@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=comment.id%></title>
+    <style>
+        a {
+            border: solid;
+            background-color: cadetblue;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h3>
+        <%= comment.username %> 
+    </h3>
+    <%= comment.comment %> 
+    <br>
+    <a href="/comments">Back to all comments</a>
+    <form method="POST" action="/comments/<%= comment.id %>/?_method=DELETE">
+        <button>Delete</button>
+    </form>
+</body>
+</html>
