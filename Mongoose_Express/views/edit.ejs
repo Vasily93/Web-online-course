@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit form</title>
+</head>
+<body>
+    Edit:
+    <form method="POST" action="/products/<%=product._id%>?_method=PUT"> 
+        <input name="name" placeholder="<%= product.name %>">
+        <input name="price" placeholder="$<%= product.price %>">
+        <label for="category">Select a Category:</label>
+        <select name="category" id="category">
+            <option value="fruit">fruit</option>
+            <option value="vegetable">vegetable</option>
+            <option value="diary">diary</option>
+        </select>
+
+        <button>Edit <%= product.name %></button>
+    </form>
+</body>
+</html>
